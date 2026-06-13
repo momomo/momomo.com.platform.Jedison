@@ -140,7 +140,7 @@ class QueueExample {
     JStream stream = new JStream<>( "key.for.stream", new JedisonIdConsumerStreamQueue(jedison().id()) );
 
     // Instant and concurrently safe propagation of read and writes across distributed servers    
-    JLive live = new JLive<>("last.seen")
+    JLive<Animal> favorites = new JLive<>("favorite.animals")
     
     // Can replace native Java based JSESSIONID server sessions with distributed one allowing ease of server delegation of request to any server  
     JSession 
